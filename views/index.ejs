@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs") %>
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="images/icons/logo.svg" alt="" width="120" height="120">
+    <h1 class="display-5 text-body-emphasis">Random Discogs Recommendation</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Get quick Discogs random album recommendations based on a particular genre.</p>
+      
+      <form action="/get-albums" method="POST">
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <input type="submit" class="btn btn-primary btn-lg px-4 gap-3" value="Get Recommendation">
+            <div class="form-group">
+                <select class="form-control form-select-lg" name="genre" id="genre-dropdown">
+                    <option selected>Genre</option>
+                    <option value="Blues">Blues</option>
+                    <option value="Brass & Military">Brass & Military</option>
+                    <option value="Children's">Children's</option>
+                    <option value="Classical">Classical</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="Folk, World, & Country">Folk, World, & Country</option>
+                    <option value="Funk / Soul">Funk / Soul</option>
+                    <option value="Hip-Hop">Hip-Hop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Latin">Latin</option>
+                    <option value="Non-Music">Non-Music</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Reggae">Reggae</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Stage & Screen">Stage & Screen</option>
+                </select>
+            </div>
+          </div>
+      </form>
+      
+    </div>
+</div>
+<%- include("partials/footer.ejs") %>
